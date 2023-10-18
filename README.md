@@ -14,3 +14,4 @@ Creamos una tabla con pgAdmin llamada games
 Configurando el backend se crean las operaciones CRUD
 Pasando al frontend, instalamos axios con npm
 Tambien instalamos vue-router para Vue 3
+Para el Frontend instale bootstrap
