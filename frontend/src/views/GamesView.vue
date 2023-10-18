@@ -41,16 +41,16 @@
         }
       },
       filterGames() {
-        if (this.searchTerm) {
-            this.filteredGames = this.games.filter(game =>
-                game.teamLocal.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-                game.teamVisitor.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-                (game.location && game.location.toLowerCase().includes(this.searchTerm.toLowerCase()))
-            );
-        } else {
-            this.filteredGames = this.games;
+            if (this.searchTerm) {
+                this.filteredGames = this.games.filter(game =>
+                    (game.teamLocal ? game.teamLocal.toLowerCase().includes(this.searchTerm.toLowerCase()) : false) ||
+                    (game.teamVisitor ? game.teamVisitor.toLowerCase().includes(this.searchTerm.toLowerCase()) : false) ||
+                    (game.location ? game.location.toLowerCase().includes(this.searchTerm.toLowerCase()) : false)
+                );
+            } else {
+                this.filteredGames = this.games;
+            }
         }
-      }
     },
     created() {
         this.loadGames();
