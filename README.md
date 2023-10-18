@@ -1,3 +1,8 @@
+Para ejecutar vamos ala carpeta backend y damons node server.js
+luego, en la carpeta frontend npm run serve
+y la pagina abre en http://localhost:8080/
+
+
 Procesos realizados para el desarrollo del proyecto
 Creamos una carpeta de trabajo "gamespro"
 Dentro de la terminal, inicializamos node
